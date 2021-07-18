@@ -12,7 +12,7 @@ function HeaderRight() {
             <Icons name="Jobs" iconName="SuitCase" />
             <Icons name="Chat" iconName="ChatSolid" />
             <Icons name="Notification" iconName="RingerSolid" />
-            <Icons  name= "Me" avatar="https://media-exp3.licdn.com/dms/image/C5103AQH1NG…eta&t=1vMEzSploGLYK4RkiCMb1vd9OGBwDPlF7MP4eTwUwXc" />
+            <Icons  name= "Me" avatar="https://media.istockphoto.com/vectors/abstract-blu…=0&h=Wdgg1tDVgb126pXZnhuB6hzVZ072z5vRBE7W81ieqFE=" />
         </div>
     )
 }

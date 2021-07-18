@@ -1,0 +1,100 @@
+.sideBar {
+    top: 80px;
+    position: sticky;
+    flex:0.2;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+}
+.profilePersona {
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+}
+.profileCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.profileCardContainer >img {
+    width: 100%;
+    margin-bottom: -25px;
+    height: 60px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+}
+
+.statsContainer {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.profileViewStats{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileViewStats > p {
+    font-size: 11px;
+    color:gray;
+    font-weight: 800;
+}
+
+.statsCountStyles {
+    font-weight: 600;
+    color: #0a66c2 !important;
+}
+
+.profileCardContainer >h4 {
+    color: gray;
+    font-size: 12px;
+}
+
+.profileCardContainer > h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.sideBarRecentContainer {
+    text-align:left;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+}
+.sideBarRecentContainer >p {
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.sideBarRecentItem {
+    display: flex;
+    font-size: 13px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.sideBarRecentItem:hover {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+.sideBarHash {
+    margin-left: 10px;
+    margin-right: 5px;
+}

@@ -1,0 +1,10 @@
+.appBody {
+    display: flex;
+    margin-top: 10px;
+}
+.app {
+    background-color: #f3f2ef;
+    display: flex;
+    flex-direction: column;
+    
+}

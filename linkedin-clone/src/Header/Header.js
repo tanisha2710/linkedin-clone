@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderLeft from './HeaderLeft'
 import HeaderRight from './HeaderRight'
-//import './Header.css'
+import './Header.css'
 
 function Header() {
     return (
