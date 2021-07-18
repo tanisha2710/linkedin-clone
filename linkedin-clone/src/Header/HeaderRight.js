@@ -2,9 +2,21 @@ import React from 'react'
 import { initializeIcons } from '@fluentui/font-icons-mdl2';
 import { Icon } from '@fluentui/react/lib/Icon';
 import Icons from './Icons';
+import { useDispatch } from 'react-redux';
+import { logout } from '../features/UserSlice';
+import { auth } from '../FireBase/FireBase';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/UserSlice';
 
 initializeIcons();
 function HeaderRight() {
+    const dispatch = useDispatch();
+    const user = useSelector(selectUser);
+
+    const logOutApp = () => {
+        dispatch(logout());
+        auth.signOut();
+    };
     return (
         <div className="headerRight">
             <Icons name="Home" iconName="HomeSolid" />
@@ -12,7 +24,12 @@ function HeaderRight() {
             <Icons name="Jobs" iconName="SuitCase" />
             <Icons name="Chat" iconName="ChatSolid" />
             <Icons name="Notification" iconName="RingerSolid" />
-            <Icons  name= "Me" avatar="https://media.istockphoto.com/vectors/abstract-blu…=0&h=Wdgg1tDVgb126pXZnhuB6hzVZ072z5vRBE7W81ieqFE=" />
+            {user ? (
+                <Icons name="Sign out" showAvatar={true} displayName={user.displayName} avatar={user.photoUrl} onClick={logOutApp} />
+            ) : (
+                    <Icons name="Me" showAvatar={true} />
+                )
+            }
         </div>
     )
 }

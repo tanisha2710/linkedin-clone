@@ -5,6 +5,7 @@ import ProfileViewStats from './ProfileViewStats';
 import SideBarRecent from './SideBarRecent';
 
 function SideBar() {
+
     return (
         <div className="sideBar">
             <SideBarProfileCard />
