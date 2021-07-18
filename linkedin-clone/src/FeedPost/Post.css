@@ -12,6 +12,7 @@ border-radius: 10px;
 .headerInfo {
     margin-left: 12px;
     color: gray;
+    margin-top: 3px;
 
 }
 .headerInfo > h2 {

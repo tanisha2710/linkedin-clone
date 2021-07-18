@@ -1,17 +1,23 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import "./Post.css";
-import { Persona, PersonaSize } from '@fluentui/react/lib/Persona';
+import { PersonaCoin, PersonaSize } from '@fluentui/react/lib/Persona';
 import FeedInputItem from '../Feed/FeedInputItem';
 
-function Post({ name, description, message, photoUrl}) {
+const Post = forwardRef(({ name, description, message, photoUrl}, ref) => {
     return (
-        <div className="post">
+        <div ref={ref} className="post">
             <div className="postHeader">
-                <Persona imageUrl={photoUrl} size={PersonaSize.size40} />
-                <div className="headerInfo">
-                    <h2>{name}</h2>
-                    <p>{description}</p>
-                </div>
+            <PersonaCoin
+                imageUrl={photoUrl}
+                text={name}
+                imageShouldStartVisible={true}
+                size={PersonaSize.size40}
+                showInitialsUntilImageLoads={true}
+            />
+            <div className="headerInfo">
+                <h2>{name}</h2>
+                <p>{description}</p>
+            </div>
             </div>
             <div className="postBody">
                 <p>{message}</p>
@@ -25,6 +31,6 @@ function Post({ name, description, message, photoUrl}) {
             
         </div>
     )
-}
+})
 
 export default Post

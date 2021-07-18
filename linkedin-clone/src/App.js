@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectUser, loginUser, logout } from './features/UserSlice';
 import Login from './UserAuthentication/Login';
 import { auth } from './FireBase/FireBase';
+import Widgets from './Widgets/Widgets';
 
 function App() {
   const user = useSelector(selectUser);
@@ -15,7 +16,6 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-        console.log(userAuth);
         dispatch(loginUser({
           email: userAuth.email,
           uid: userAuth.uid,
@@ -37,6 +37,7 @@ function App() {
         <div className="appBody">
         <SideBar />
         <Feed />
+        <Widgets />
       </div>
       )}
     </div>

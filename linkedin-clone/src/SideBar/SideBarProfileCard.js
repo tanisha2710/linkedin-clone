@@ -1,5 +1,5 @@
 import React from 'react'
-import { Persona, personaSize, PersonaCoin } from '@fluentui/react/lib/Persona'
+import {personaSize, PersonaCoin } from '@fluentui/react/lib/Persona'
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/UserSlice';
 
@@ -18,7 +18,7 @@ function SideBarProfileCard() {
                 showInitialsUntilImageLoads={true}
             />
             <h2>{user.displayName}</h2>
-            <h4>Software Engineer at Microsoft</h4>              
+            <h4>{user.email}</h4>              
         </div>
     )
 }
