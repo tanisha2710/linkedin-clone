@@ -48,12 +48,12 @@ function Feed() {
             <FeedInput value={inputValue} onChange={onChange} onSubmit={onSubmit} />
             <FlipMove>
             {posts.map(({ id, data: { name, description, message,
-                photoUrl } }) =>
+                photourl } }) =>
                 <Post
                     key={id}
                     name={name}
                     message={message}
-                    photoUrl={photoUrl}
+                    photoUrl={photourl}
                     description={description}
                 />
             )}
